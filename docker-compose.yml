@@ -5,7 +5,7 @@ services:
     container_name: server-perf-reporter
     image: node:22
     restart: unless-stopped
-    command: bash -c "npm install && node app.js"
+    command: bash -c "npm install && node --env-file=.env app.js"
     working_dir: /app
     volumes:
       - .:/app:rw

@@ -3,10 +3,9 @@ const si = require("systeminformation");
 
 const hostname = "0.0.0.0";
 const port = 3000;
-const key = "tAvF2BnmFGq33ZqU6CTE";
 
 const server = createServer(async (req, res) => {
-  if (req.headers.authorization !== key) {
+  if (req.headers.authorization !== process.env.KEY) {
     res.statusCode = 401;
     res.end();
     return;
