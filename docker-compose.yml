@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  app:
+    container_name: server-perf-reporter
+    image: node:22
+    restart: unless-stopped
+    command: bash -c "npm install && node app.js"
+    working_dir: /app
+    volumes:
+      - .:/app:rw
+    ports:
+      - "16420:3000"
