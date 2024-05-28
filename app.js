@@ -19,7 +19,7 @@ const server = createServer(async (req, res) => {
         time: "uptime",
         mem: "available, total",
         currentLoad: "avgLoad, currentLoad",
-        fsSize: "fs, size, used, available, use",
+        fsSize: "fs, size, used, available, use | fs:overlay",
       })
     )
   );
